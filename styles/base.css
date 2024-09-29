@@ -1,0 +1,109 @@
+header {
+    background-color: rgb(23, 78, 112);
+    color: white;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    }
+    
+header span {
+    font-size: 1.5em;
+    font-family:"Bebas Neue", sans-serif;
+    margin-left: 5%;
+}
+
+.me {
+    width: 70px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5)
+}
+
+h1{
+    font-size: 1.5em;
+    font-family:"Bebas Neue", sans-serif;
+    text-align: center;
+    grid-column: 1/4;
+}
+
+nav {
+    background-color: rgb(85, 85, 85);
+  }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a{
+    display: block;
+    color:white;
+    text-align: center;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav .active {
+    background-color: rgba(0, 0, 0, 0.30);
+}
+
+p{
+  font-family: "Open Sans", sans-serif;
+}
+
+a{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+}
+
+.card1{
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid gray;
+    border-radius: 2%;
+    margin-top: 10px;
+}
+
+.card2{
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid gray;
+    border-radius: 2%;
+    margin-top: 10px;
+   
+}
+
+.card1 h2 {
+    font-size: 1em;
+    font-family:"Bebas Neue", sans-serif;
+    text-align: center;
+    background-color: rgb(23, 78, 112);
+    color: white;
+    margin: 0;
+    border-top-left-radius: 1px; 
+    border-top-right-radius: 1px;       
+}
+
+.card2 h2 {
+    font-size: 1em;
+    font-family:"Bebas Neue", sans-serif;
+    text-align: center;
+    background-color: rgb(23, 78, 112);
+    color: white;
+    margin: 0;
+    border-top-left-radius: 1px; 
+    border-top-right-radius: 1px;
+}
+
+footer{
+    align-items: center;
+    background-color: rgb(23, 78, 112);
+    color: white;
+    padding: 1px; 
+    margin-top: 20px; 
+    text-align: center;
+    align-items: center;
+    font-size: 90%;
+}
