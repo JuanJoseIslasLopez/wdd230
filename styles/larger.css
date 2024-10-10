@@ -69,4 +69,17 @@ main {
     margin-left: 10px;
 }
 
+
+#menu {
+    display: none;
+}
+
+
+.navigation a {
+    display: block;
+    flex: 1 1 100%;
+}
+
+
+
 }
