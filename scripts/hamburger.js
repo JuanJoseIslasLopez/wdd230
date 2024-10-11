@@ -7,7 +7,7 @@ hamButton.addEventListener('click', () => {
 });
 
 const darkModeToggle = document.querySelector('#darkModeToggle');
-const mainArea = document.querySelector('main'); 
+const mainArea = document.querySelector('body'); 
 
 darkModeToggle.addEventListener('click', () => {
     mainArea.classList.toggle('dark-mode'); 

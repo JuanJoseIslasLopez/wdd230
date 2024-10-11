@@ -169,3 +169,8 @@ footer{
 .dark-mode footer {
     background-color: #121212;
 }
+
+.dark-mode #menu::before {
+	content: "☰";
+    color: #fff;
+}
