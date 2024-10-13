@@ -1,0 +1,30 @@
+/* Larger screen styles */
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex; /* Show links in larger view */
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    .hamburger-menu {
+        display: none; /* Hide hamburger menu in larger view */
+    }
+
+    .spotlights {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .spotlight {
+        width: 30%;
+        padding: 10px;
+        background-color: #F0F0F0;
+        border-radius: 10px;
+    }
+
+    .hero img{
+        width: 500px;
+        grid-column: 1/4;
+    }
+}
