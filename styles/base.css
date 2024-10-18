@@ -174,3 +174,35 @@ footer{
 	content: "☰";
     color: #fff;
 }
+
+.main {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    white-space: nowrap;
+    font-size: 1rem;
+}
+
+picture{
+    grid-column: 1/4;
+    justify-content: center;
+    align-items: center;
+}
+
+picture img{
+    width: 100%;
+}
+
+iframe{
+    width: 90%;
+    margin: 1rem;
+    
+}

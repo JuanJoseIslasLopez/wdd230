@@ -1,0 +1,23 @@
+body {
+    margin: auto;
+    width: 640px; 
+    padding: 50px;
+  }
+  
+img {
+display: block;
+width: 60%;
+margin: auto;
+padding: 1rem;
+opacity: 0;
+animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

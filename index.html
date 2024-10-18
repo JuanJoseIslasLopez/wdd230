@@ -38,11 +38,18 @@
     </nav>
     <main>
     <h1>WDD 230: Web Frontend Development</h1>
+    <picture>
+        <source srcset="images/austin-texas-temple-phone.webp 400w" media="(max-width: 400px)">
+        <source srcset="images/austin-texas-temple.webp 960w" media="(min-width: 401px)">
+        <img src="images/austin-texas-temple.webp" alt="Temple Austin" loading="lazy">
+    </picture>
+    <div class="overlay">Austin, Texas</div>
     <section class="card1">
         <h2>Learning Activities</h2>
         <ul>
-            <li>Week 1 <a href="week01/holygrail.html">Layout</a> | <a href="week01/media-query.html">Media Query</a> | <a href="https://codepen.io/blazzard-jason/pen/WNyPpXJ">JS Pen</a></li>
-            <li>Week 2 <a href="week02/design.html">Design</a> | <a href="week02/bom.html">DOM Manipulation</a> | <a href="https://codepen.io/Juan-Jos-Islas-Lopez/pen/LYwbLLq">Hamburger Button</a></li>
+            <li>Week 1: <a href="week01/holygrail.html">Layout</a> | <a href="week01/media-query.html">Media Query</a> | <a href="https://codepen.io/blazzard-jason/pen/WNyPpXJ">JS Pen</a></li>
+            <li>Week 2: <a href="week02/design.html">Design</a> | <a href="week02/bom.html">DOM Manipulation</a> | <a href="https://codepen.io/Juan-Jos-Islas-Lopez/pen/LYwbLLq">Hamburger Button</a></li>
+            <li>Week 03: <a href="week03/images/landscape.webp">WebP</a> | <a href="week03/lazyload.html">Lazyload | </a></li>
         </ul>
     </section>
     <section class="card2">
@@ -52,6 +59,8 @@
         </ul>
     </section>
     </main>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220314.11623458203!2d-97.93901370778947!3d30.367768457275183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865b2d59bb2ab7bf%3A0x783a47015ee41e16!2sAustin%20Texas%20Temple!5e0!3m2!1ses-419!2suy!4v1729229330158!5m2!1ses-419!2suy" width="600" height="450" loading="lazy"></iframe>
+    <div id="visit-counter"></div>
     <footer>
         <p>
             <span id="currentyear"></span>
