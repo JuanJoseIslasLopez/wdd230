@@ -2,38 +2,33 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #FFFFFF;
     color: #000000;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 3fr;
 }
 
 h1 {
     font-family: 'Poppins', sans-serif;
-    color: #5080e7;
+    color: #0e3280;
+    font-size: 1.5rem;
 }
 
 h2 {
     font-family: 'Poppins', sans-serif;
     color: #133279;
+    font-size: 1rem;
+}
+
+
+h3{
+    font-size: 1rem;
 }
 
 header {
-    background-color: #5080e7;
+    background-color: #225ee0;
     color: #FFFFFF;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
 }
-
-
-span{
-    font-family: 'Poppins', sans-serif;
-}
-
 
 .logo{
     width: 50px;
+    margin-left: 30%;
 }
 
 nav a{
@@ -53,7 +48,17 @@ nav .active {
 }
 
 .nav-links {
-    display: none;
+    display: none; 
+    flex-direction: column;
+    text-align: center;
+    background-color: #225ee0;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-links.open {
+    display: block;
 }
 
 .hamburger-menu {
@@ -61,10 +66,22 @@ nav .active {
     border: none;
     background: none;
     cursor: pointer;
+    
 }
 
-main {
-    padding: 20px;
+.hero h1{
+    margin-top: -180px;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.37);
+    
+}
+
+.hero p{
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.452);
+    font-weight: 100px;
 }
 
 .cta-button {
@@ -75,18 +92,21 @@ main {
     font-weight: bold;
     display: inline-block;
     border-radius: 5px;
-    margin: 10px 0;
+    margin-bottom: 0px;
+    margin-left: 20%;
+    margin-top: -50px ;
+    position: relative;
+    z-index: 2;
+}
+section{
+    margin-bottom: 30px;
 }
 
 footer {
-    background-color: #5080e7;
+    background-color: #225ee0;
     color: #FFFFFF;
     text-align: center;
     padding: 10px;
-}
-
-footer p {
-    margin: 5px;
 }
 
 .container {
@@ -95,46 +115,35 @@ footer p {
     padding: 0 15px;
     box-sizing: border-box;
 }
+.hero{
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Allows the overlay and content to stack properly */
+    color: rgb(0, 0, 0); /* Text color */
+    
+}
 
 .hero img{
-    width: 500px;
-    grid-column: 1/4;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(248, 243, 243, 0.5); 
+    display: block;
 }
 
 #menu {
 	font-size: 1.5rem;
 	border: 0;
 	background: none;
-	color: #000;
+	color: #ffffff;
 }
 
 #menu::before {
 	content: "☰";
+    margin-left: 20px;
 }
 
 #menu.open::before {
 	content: "❎";
 }
 
-.navigation {
-	display: flex;
-	flex-direction: column;
-	list-style: none;
-	color: #fff;
-}
-
-.navigation a {
-	display: none;
-	padding: 1rem;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-}
-.navigation a:hover {
-	background-color: #bbb;
-	font-weight: 700;
-}
-
-.open a {
-	display: block;
-}
