@@ -147,3 +147,53 @@ footer {
 	content: "❎";
 }
 
+/* discover html*/
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Sidebar 1/4 width, main content 3/4 */
+    gap: 20px;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Three images per row */
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for desktop view */
+.image-grid img:hover {
+    transform: scale(1.1);
+}
+
+main img.lazy-image {
+    display: block;
+    width: 60%;
+    margin: auto;
+    padding: 1rem;
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease-in; /* Smooth fade-in */
+}
+
+main img.lazy-image.visible {
+    opacity: 1; /* Fade in when visible */
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 1rem;
+}

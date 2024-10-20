@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Montevideo - Explore the city and its attractions.">
+    <title>Discover Montevideo</title>
+    <link rel="icon" href="favicon.ico" type="favicon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body class="container">
+    <header>
+        <button id="menu" aria-label="Menu"></button>
+        <img class="logo" src="images/cooperacion.png" alt="logo">
+        <nav class="navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Join the Chamber</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Weather</a></li>
+                <li><a href="#">Company Spotlights</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="grid-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h2>Explore Montevideo</h2>
+                <p id="visit-message"></p>
+                <p>Here are some interesting facts about Montevideo, current events, and more.</p>
+                <ul>
+                    <li>Population: 1.3 million</li>
+                    <li>Famous Landmark: La Rambla</li>
+                    <li>Upcoming Event: Montevideo Carnival</li>
+                </ul>
+            </aside>
+
+            <!-- Main Content Area: Image Gallery -->
+            <section class="gallery">
+                <h2>Montevideo in Pictures</h2>
+                <div class="image-grid">
+                    <img src="images/cityscape.webp" alt="Montevideo Cityscape" loading="lazy" class="lazy-image" >
+                    <img src="images/rambla.webp" alt="Rambla Coastline" loading="lazy"class="lazy-image">
+                    <img src="images/plaza.webp" alt="Plaza Independencia" loading="lazy" class="lazy-image">
+                    <img src="images/skyline.webp" alt="Montevideo Skyline" loading="lazy" class="lazy-image">
+                    <img src="images/solis.webp" alt="Teatro Solis" loading="lazy" class="lazy-image">
+                    <img src="images/streets.webp" alt="Montevideo Streets" loading="lazy" class="lazy-image">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact: info@montevideochamber.com | (555) 123-4567</p>
+        <p>WDD 230 Project – Developed by Juan Islas</p>
+        <p>Last updated: <span id="last-updated"></span></p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

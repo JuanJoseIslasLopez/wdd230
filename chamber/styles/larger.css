@@ -76,4 +76,10 @@
         margin-bottom: 100px;
     }
     
+  
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three images per row */
+        gap: 10px;
+    }
 }
