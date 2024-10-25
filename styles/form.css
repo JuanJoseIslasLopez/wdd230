@@ -1,0 +1,91 @@
+:root {
+    --primary-color: rgb(23, 78, 112); /* Primary header and footer color */
+    --secondary-color: rgb(245, 243, 243); /* Secondary color for navigation */
+    --font-family-title: "Bebas Neue", sans-serif; /* Title font */
+    --font-family-body: "Open Sans", sans-serif; /* Body font */
+}
+
+body {
+    font-family: var(--font-family-body);
+    background-color: var(--secondary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+header span {
+    font-family: var(--font-family-title);
+}
+
+h1 {
+    font-family: var(--font-family-title);
+}
+
+main{
+    display: block;
+    max-width: 300px;
+    align-items: center;
+    margin-left: 40px;
+}
+#registration-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#registration-form fieldset{
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+#registration-form label {
+    margin: 10px 0 5px;
+}
+
+#registration-form input[type="text"],
+#registration-form input[type="password"],
+#registration-form input[type="email"],
+#registration-form input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#registration-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#registration-form button:hover {
+    background-color: darkgreen; /* Adjust hover effect */
+}
+
+
+
+#registration-form input:required{
+    border-bottom: solid 8px red;
+}
+
+#registration-form input:required:valid{
+    border-bottom: solid 8px green;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+
+    main{
+        margin-left: 400px;
+        max-width: 400px;
+    }
+
+}
