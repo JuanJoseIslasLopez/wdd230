@@ -82,4 +82,72 @@
         grid-template-columns: repeat(3, 1fr); /* Three images per row */
         gap: 10px;
     }
+
+     /* Layout Adjustments */
+     .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 40px;
+    }
+
+    .sidebar {
+        display: block;
+        background-color: #e0e0e0;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 230px;
+        max-height: 1030px;
+    }
+
+    /* Membership Benefits Section */
+    .membership-benefits {
+        display: block;
+        padding: 15px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    /* Form Styles */
+    #registration-form form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 200px;
+        
+    }
+
+    #registration-form label {
+        font-size: 1rem;
+    }
+
+    #registration-form input[type="text"],
+    #registration-form input[type="email"],
+    #registration-form input[type="tel"],
+    #registration-form select,
+    #registration-form textarea {
+        font-size: 1rem;
+        padding: 12px;
+        width: 95%;
+    }
+
+    #registration-form fieldset {
+        grid-column: 1 / -1;
+        padding: 1.5rem;
+        
+    }
+
+    /* Submit Button */
+    #registration-form button {
+        grid-column: 1 / -1;
+        padding: 12px 20px;
+        font-size: 1.125rem;
+    }
+
+    #return{
+        max-width: 250px;
+        align-items: center;
+        margin-top: 10px;
+    }
 }
+

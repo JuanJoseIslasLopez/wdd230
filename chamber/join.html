@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Montevideo Chamber of Commerce - Supporting local businesses and fostering community development.">
+    <meta name="author" content="Juan Islas">
+    <meta property="og:title" content="Montevideo Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://juanjoseislaslopez.github.io/wdd230/chamber/images/building.webp">
+    <meta property="og:url" content="https://juanjoseislaslopez.github.io/wdd230/chamber">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Montevideo Chamber of Commerce</title>
+    <link rel="icon" href="favicon.ico" type="favicon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body class="container">
+
+    <header>
+        <button id="menu" aria-label="Menu"></button>
+            <img class="logo" src="images/cooperacion.png" alt="logo">
+        <nav class="navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#"class="active">Join the Chamber</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Weather</a></li>
+                <li><a href="#">Company Spotlights</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/building.webp" alt="Montevideo Cityscape">
+            <h1>Welcome to the Montevideo Chamber of Commerce</h1>
+            <p>Empowering local businesses and fostering community growth.</p>
+            
+        </section>
+    
+        <div class="grid-layout">
+            <aside class="sidebar">
+                <h2>Membership Benefits</h2>
+                <ul>
+                    <li>Non-Profit: Networking, Events Access</li>
+                    <li>Bronze: Discounts, Training</li>
+                    <li>Silver: Priority Access, Exposure</li>
+                    <li>Gold: VIP Events, Full Advertising</li>
+                </ul>
+            </aside>
+            
+            <section id="registration-form">
+                <form action="thankyou.html" method="get">
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label for="first-name">First Name*</label>
+                        <input type="text" id="first-name" name="first-name" required>
+    
+                        <label for="last-name">Last Name*</label>
+                        <input type="text" id="last-name" name="last-name" required>
+    
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+    
+                        <label for="phone">Phone*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </fieldset>
+    
+                    <fieldset>
+                        <legend>Business Information</legend>
+                        <label for="organization">Organization Name*</label>
+                        <input type="text" id="organization" name="organization" required>
+    
+                        <label for="title">Title / Position*:</label>
+                        <input type="text" id="title" name="title" required 
+                        pattern="^[a-zA-Z\- ]{7,}$" 
+                        title="Title must be at least 7 characters and can only contain letters, hyphens, and spaces.">
+    
+                        <label for="membership-level">Membership Level*</label>
+                        <select id="membership-level" name="membership-level" required>
+                            <option value="">Select</option>
+                            <option value="np">Non-Profit</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </fieldset>
+    
+                    <fieldset>
+                        <label for="description">Business Description</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+    
+                        <button type="submit">Register</button>
+                    </fieldset>
+                </form>
+
+                <div id="formmessage"></div>
+            </section>
+        </div>
+    </main>
+    
+
+    <footer id="fj">
+        <p>Contact: info@montevideochamber.com | (555) 123-4567</p>
+        <p>WDD 230 Project – Developed by Juan Islas</p>
+        <p>Last updated: <span id="last-updated"></span></p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

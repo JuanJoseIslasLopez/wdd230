@@ -57,3 +57,24 @@ document.addEventListener("DOMContentLoaded", function () {
         imageObserver.observe(image); // Start observing each image
     });
 });
+
+
+// Function to display the last updated date
+function displayLastUpdatedDate() {
+    const lastUpdated = new Date(document.lastModified);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('last-updated').textContent = lastUpdated.toLocaleDateString(undefined, options);
+}
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    displayLastUpdatedDate();
+
+    const registrationForm = document.querySelector('#registration-form form');
+    if (registrationForm) {
+        // No need for a custom submission handler, just allow the default form submission
+        registrationForm.addEventListener('submit', () => {
+            // This will allow the form to navigate to thankyou.html
+        });
+    }
+});
