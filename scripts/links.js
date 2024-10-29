@@ -2,17 +2,17 @@ const baseURL = "https://juanjoseislaslopez.github.io/wdd230/";
 const linksURL = "https://juanjoseislaslopez.github.io/wdd230/data/links.json";
 
 async function getLinks() {
-    try {
-        const response = await fetch(linksURL);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log(data); // Check what the response looks like
-        displayLinks(data); // Pass the entire data object
-    } catch (error) {
-        console.error('Error fetching links:', error);
-    }
+  console.log("Fetching JSON data from:", linksURL); // Log URL to check accuracy
+  const response = await fetch(linksURL);
+  console.log("Response Status:", response.status); // Log response status
+  
+  if (response.ok) {
+      const data = await response.json();
+      console.log("Fetched Data:", data); // Log data structure
+      displayLinks(data.weeks);
+  } else {
+      console.error("Failed to fetch JSON:", response.statusText);
+  }
 }
 
 function displayLinks(data) {
