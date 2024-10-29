@@ -72,7 +72,7 @@ a{
     border: 2px solid gray;
     border-radius: 2%;
     margin-top: 10px;
-   
+    
 }
 
 .card1 h2 {
@@ -96,6 +96,15 @@ a{
     border-top-left-radius: 1px; 
     border-top-right-radius: 1px;
 }
+
+.card2 div{
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    margin: 10px;
+    text-align: center;
+}
+
 
 footer{
     align-items: center;
@@ -181,7 +190,7 @@ footer{
 
 .overlay {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 80%;
     transform: translate(-50%, -50%);
     color: white; 

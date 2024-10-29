@@ -69,6 +69,9 @@ main {
     margin-left: 10px;
 }
 
+iframe{
+    padding: 40px;
+}
 
 #menu {
     display: none;
@@ -83,7 +86,7 @@ main {
 .overlay {
     position: absolute;
     top: 50%;
-    left: 75%;
+    left: 70%;
     transform: translate(-50%, -50%);
     color: white; 
     background: rgba(0, 0, 0, 0.5); 
