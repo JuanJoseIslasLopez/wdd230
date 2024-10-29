@@ -1,0 +1,53 @@
+[
+    {
+        "familyName": "Smith",
+        "moveInDate": "2024-05-15",
+        "numberOfPeople": 4,
+        "visitedByBishopric": true,
+        "members": [
+            {
+                "name": "John Smith",
+                "gender": "Male",
+                "birthdate": "1980-04-12"
+            },
+            {
+                "name": "Jane Smith",
+                "gender": "Female",
+                "birthdate": "1983-09-20"
+            },
+            {
+                "name": "Sam Smith",
+                "gender": "Male",
+                "birthdate": "2010-11-05"
+            },
+            {
+                "name": "Sara Smith",
+                "gender": "Female",
+                "birthdate": "2013-03-22"
+            }
+        ]
+    },
+    {
+        "familyName": "Johnson",
+        "moveInDate": "2023-11-25",
+        "numberOfPeople": 3,
+        "visitedByBishopric": false,
+        "members": [
+            {
+                "name": "Michael Johnson",
+                "gender": "Male",
+                "birthdate": "1975-01-30"
+            },
+            {
+                "name": "Linda Johnson",
+                "gender": "Female",
+                "birthdate": "1977-07-18"
+            },
+            {
+                "name": "Chris Johnson",
+                "gender": "Male",
+                "birthdate": "2015-12-01"
+            }
+        ]
+    }
+]
