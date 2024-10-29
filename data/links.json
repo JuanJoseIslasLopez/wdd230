@@ -1,0 +1,93 @@
+{
+  "weeks": [
+    {
+      "week": "Week 01",
+      "links": [
+        {
+          "url": "week01/holygrail.html",
+          "title": "Layout"
+        },
+        {
+          "url": "week01/media-query.html",
+          "title": "Media Query"
+        },
+        {
+          "url": "https://codepen.io/blazzard-jason/pen/WNyPpXJ",
+          "title": "JS Pen"
+        }
+      ]
+    },
+    {
+      "week": "Week 02",
+      "links": [
+        {
+          "url": "week02/design.html",
+          "title": "Design"
+        },
+        {
+          "url": "week02/bom.html",
+          "title": "DOM Manipulation"
+        },
+        {
+          "url": "https://codepen.io/Juan-Jos-Islas-Lopez/pen/LYwbLLq",
+          "title": "Hamburger Button"
+        }
+      ]
+    },
+    {
+      "week": "Week 03",
+      "links": [
+        {
+          "url": "week03/images/landscape.webp",
+          "title": "WebP"
+        },
+        {
+          "url": "week03/lazyload.html",
+          "title": "Lazyload"
+        }
+      ]
+    },
+    {
+      "week": "Week 04",
+      "links": [
+        {
+          "url": "https://codepen.io/Juan-Jos-Islas-Lopez/pen/mdNqGyM",
+          "title": "CSS Pseudo-Classes"
+        },
+        {
+          "url": "week04/images/combinators.webp",
+          "title": "CSS Combinators"
+        },
+        {
+          "url": "week04/tablebuild.html",
+          "title": "Tables"
+        },
+        {
+          "url": "week04/Form-start/index.html",
+          "title": "Form"
+        }
+      ]
+    },
+    {
+      "week": "Week 05",
+      "links": [
+        {
+          "url": "https://codepen.io/Juan-Jos-Islas-Lopez/pen/MWNVYaB",
+          "title": "CSS Pseudo-elements"
+        },
+        {
+          "url": "week05/new-ward-members.json",
+          "title": "JSON"
+        },
+        {
+          "url": "week05/prophets.html",
+          "title": "The Fetch API"
+        },
+        {
+          "url": "week05/weather.html",
+          "title": "Weather"
+        }
+      ]
+    }
+  ]
+}
