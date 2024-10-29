@@ -1,0 +1,51 @@
+{
+    "members": [
+      {
+        "name": "EcoClean Solutions",
+        "address": "101 Greenway Drive, Montevideo",
+        "phone": "+598 1234 5678",
+        "website": "https://ecoclean.com",
+        "image": "https://images.unsplash.com/photo-1615013918433-4e76e58b0a9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400",
+        "membershipLevel": "Gold",
+        "otherInfo": "Provides environmentally friendly cleaning services for homes and businesses."
+      },
+      {
+        "name": "Tech Innovators Inc.",
+        "address": "250 Innovation Blvd, Montevideo",
+        "phone": "+598 8765 4321",
+        "website": "https://techinnovators.com",
+        "image": "https://images.unsplash.com/photo-1509389957351-bb5e8e4b3c4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400",
+        "membershipLevel": "Silver",
+        "otherInfo": "Specializes in tech consulting and product development."
+      },
+      {
+        "name": "Montevideo Fitness Club",
+        "address": "300 Healthy St, Montevideo",
+        "phone": "+598 2345 6789",
+        "website": "https://mvdfitness.com",
+        "image": "https://images.unsplash.com/photo-1517676842008-4e31f2f9b7e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400",
+        "membershipLevel": "Bronze",
+        "otherInfo": "Offers fitness classes, personal training, and a state-of-the-art gym."
+      },
+      {
+        "name": "Urban Eats Cafe",
+        "address": "400 Culinary Lane, Montevideo",
+        "phone": "+598 3456 7890",
+        "website": "https://urbaneatscafe.com",
+        "image": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400",
+        "membershipLevel": "Gold",
+        "otherInfo": "A trendy cafe serving locally sourced, organic foods and beverages."
+      },
+      {
+        "name": "Artisan Woodworks",
+        "address": "500 Craft Avenue, Montevideo",
+        "phone": "+598 4567 8901",
+        "website": "https://artisanwoodworks.com",
+        "image": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=400",
+        "membershipLevel": "Silver",
+        "otherInfo": "Family-owned business specializing in custom furniture and wood crafts."
+      }
+    ]
+  }
+  
+  

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 230 - Web Frontend Development Juan Islas course assignment portal. The purpose of this page is to link all the assignments of this course.">
+    <meta name="author" content="Juan Islas">
+    <meta property="og:title" content="Juan Islas - WDD 230 - Web Frontend Development"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://juanjoseislaslopez.github.io/wdd230/index.html" />
+    <meta property="og:image" content="https://juanjoseislaslopez.github.io/wdd230/images/montevideo.jpg" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/getDates.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/links.js" defer> </script>
+    <script src="scripts/weather.js" defer> </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <title>Juan Islas - WDD 230 - Web Frontend Development</title>
+</head>
+<body class="container">
+    <header>
+        <img class="me" src="images/profile.webp" alt="Juan Islas Profile">
+        <span>Juan Islas</span>
+        <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    <button id="menu"></button>
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="week01/chamber-site-plan.html">Chamber</a></li>
+            <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+    <h1>Directory of Members</h1>
+    <button id="toggleView">Switch to List View</button>
+    <main id="members-container">
+        <!-- Dynamic content will be inserted here -->
+    </main>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220314.11623458203!2d-97.93901370778947!3d30.367768457275183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865b2d59bb2ab7bf%3A0x783a47015ee41e16!2sAustin%20Texas%20Temple!5e0!3m2!1ses-419!2suy!4v1729229330158!5m2!1ses-419!2suy" width="600" height="450" loading="lazy"></iframe>
+    
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+            <a>Juan Islas -</a>
+            <a>Uruguay</a>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
