@@ -149,17 +149,17 @@ footer {
 
 /* discover html*/
 
-.grid-layout {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* Sidebar 1/4 width, main content 3/4 */
-    gap: 20px;
-}
 
 .sidebar {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 5px;
+    margin-top: 0;
+    grid-template-rows: 0;
 }
+
+
+
 
 .image-grid {
     display: grid;
@@ -257,7 +257,7 @@ main img.lazy-image.visible {
 }
 
 .sidebar {
-    display:flex;
+    display: block;
     margin-top: 80px;
 }
 #description {

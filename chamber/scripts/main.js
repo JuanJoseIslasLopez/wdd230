@@ -15,30 +15,38 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-    const sidebarMessage = document.querySelector('#visit-message'); // Assuming you have a placeholder for the message
-    const lastVisit = localStorage.getItem('lastVisit'); // Get the last visit time from localStorage
-    const currentVisit = Date.now(); // Get the current time in milliseconds
+    const sidebarMessage = document.querySelector('#visit-message');
+    const lastVisit = localStorage.getItem('lastVisit');
+    const currentVisit = Date.now();
 
     if (lastVisit === null) {
-        // If there is no stored last visit, it's the user's first time visiting
         sidebarMessage.textContent = "Welcome! Let us know if you have any questions.";
     } else {
-        // Calculate the time difference between the current visit and the last visit in milliseconds
         const timeDifference = currentVisit - lastVisit;
-        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const lastVisitDate = new Date(lastVisit).toLocaleDateString();
 
         if (daysDifference < 1) {
             sidebarMessage.textContent = "Back so soon! Awesome!";
         } else if (daysDifference === 1) {
-            sidebarMessage.textContent = `You last visited 1 day ago.`;
+            sidebarMessage.textContent = `You last visited 1 day ago on ${lastVisitDate}.`;
         } else {
-            sidebarMessage.textContent = `You last visited ${daysDifference} days ago.`;
+            sidebarMessage.textContent = `You last visited ${daysDifference} days ago on ${lastVisitDate}.`;
         }
     }
 
-    // Update localStorage with the current visit time
     localStorage.setItem('lastVisit', currentVisit);
+    
+    // Optional clear button for testing
+    const clearButton = document.querySelector('#clear-visit');
+    if (clearButton) {
+        clearButton.addEventListener('click', () => {
+            localStorage.removeItem('lastVisit');
+            sidebarMessage.textContent = "Last visit cleared! Welcome again!";
+        });
+    }
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll("img.lazy-image");
@@ -58,10 +66,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Last updated date
+    const lastUpdated = document.getElementById('last-updated');
+    if (lastUpdated) {
+        lastUpdated.textContent = document.lastModified;
+    }
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("timestamp").value = new Date().toISOString();
 });
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const apiKey = '79dbab3e43d026674e2f87b0efd7e711';
     const lat = -34.9011; // Latitude for Montevideo
@@ -82,12 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const iconCode = data.weather[0].icon;
             const iconsrc = `https://openweathermap.org/img/w/${iconCode}.png`;
             const desc = data.weather[0].description;
-
-            weatherIcon.setAttribute('src', iconsrc);
-            weatherIcon.setAttribute('alt', desc);
             captionDesc.textContent = `${desc}`;
         })
-        .catch(error => console.error('Error fetching current weather:', error));
+
 
     // Fetch 3-day forecast
     fetch(forecastUrl)
@@ -193,8 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkBannerVisibility() {
         const today = new Date();
         const day = today.getDay(); // 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, etc.
-        
-        console.log("Today's day number:", day); // Log the day number for debugging
+
 
         // Show the banner if today is Monday (1), Tuesday (2), or Wednesday (3)
         if (day === 1 || day === 2 || day === 3) {
@@ -212,4 +224,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Run the check on page load
     checkBannerVisibility();
-});
+})})
