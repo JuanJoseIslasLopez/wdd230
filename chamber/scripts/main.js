@@ -62,3 +62,125 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("timestamp").value = new Date().toISOString();
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const apiKey = '79dbab3e43d026674e2f87b0efd7e711';
+    const lat = -34.9011; // Latitude for Montevideo
+    const lon = -56.1645; // Longitude for Montevideo
+
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+    const currentTemp = document.querySelector('#current-temp');
+    const weatherIcon = document.querySelector('#weather-icon');
+    const captionDesc = document.querySelector('#weather-desc');
+
+    // Fetch current weather
+    fetch(currentWeatherUrl)
+        .then(response => response.json())
+        .then(data => {
+            currentTemp.innerHTML = `${data.main.temp}°C`;
+            const iconCode = data.weather[0].icon;
+            const iconsrc = `https://openweathermap.org/img/w/${iconCode}.png`;
+            const desc = data.weather[0].description;
+
+            weatherIcon.setAttribute('src', iconsrc);
+            weatherIcon.setAttribute('alt', desc);
+            captionDesc.textContent = `${desc}`;
+        })
+        .catch(error => console.error('Error fetching current weather:', error));
+
+    // Fetch 3-day forecast
+    fetch(forecastUrl)
+        .then(response => response.json())
+        .then(data => {
+            const forecastContainer = document.querySelector('#forecast');
+            forecastContainer.innerHTML = ''; // Clear any existing forecast data
+
+            // Get the forecast for the next 3 days (assuming 8 intervals per day)
+            for (let i = 0; i < 3; i++) {
+                const day = data.list[i * 8]; // 8 intervals per day
+                const temp = day.main.temp;
+                const desc = day.weather[0].description;
+                const iconCode = day.weather[0].icon;
+                const iconsrc = `https://openweathermap.org/img/w/${iconCode}.png`;
+
+                // Create a new Date object from the forecast timestamp
+                const date = new Date(day.dt * 1000); // Convert seconds to milliseconds
+
+                // Format the date as 'Day, Month Date'
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = date.toLocaleDateString('en-US', options);
+
+                const forecastElement = document.createElement('div');
+                forecastElement.classList.add('forecast-day');
+                forecastElement.innerHTML = `
+                    <p>${formattedDate}: ${temp}°C - ${desc}</p>
+                    <img src="${iconsrc}" alt="${desc}" />
+                `;
+                
+                forecastContainer.appendChild(forecastElement);
+            }
+        })
+        .catch(error => console.error('Error fetching forecast:', error));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const membersUrl = 'https://juanjoseislaslopez.github.io/wdd230/chamber/data/members.json'; // Adjust the path to your JSON data
+    const spotlightContainer = document.querySelector('#member-spotlights');
+
+    // Function to load and display member spotlights
+    function loadMemberSpotlights() {
+        fetch(membersUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Check if data is an object and has a members array
+                if (!data || !Array.isArray(data.members)) {
+                    throw new TypeError('Expected members array in data');
+                }
+
+                // Filter members with silver or gold membership levels
+                const qualifiedMembers = data.members.filter(member => 
+                    member.membershipLevel.toLowerCase() === 'silver' || 
+                    member.membershipLevel.toLowerCase() === 'gold'
+                );
+
+                // Randomly select 2 to 3 members
+                const selectedMembers = getRandomMembers(qualifiedMembers, 2, 3);
+
+                // Clear existing spotlights
+                spotlightContainer.innerHTML = '';
+
+                // Display selected members
+                selectedMembers.forEach(member => {
+                    const memberElement = document.createElement('div');
+                    memberElement.classList.add('spotlight-member');
+                    memberElement.innerHTML = `
+                        <h4>${member.name}</h4>
+                        <img src="${member.image}" alt="${member.name}" />
+                        <p>Membership Level: ${member.membershipLevel}</p>
+                        <p>${member.otherInfo}</p>
+                        <p>Address: ${member.address}</p>
+                        <p>Phone: ${member.phone}</p>
+                        <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+                    `;
+                    spotlightContainer.appendChild(memberElement);
+                });
+            })
+            .catch(error => console.error('Error fetching member data:', error));
+    }
+
+    // Function to get random members from an array
+    function getRandomMembers(members, min, max) {
+        const numberOfMembers = Math.floor(Math.random() * (max - min + 1)) + min;
+        const shuffled = members.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, numberOfMembers);
+    }
+
+    // Load member spotlights on page load
+    loadMemberSpotlights();
+});

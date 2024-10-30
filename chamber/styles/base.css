@@ -337,3 +337,124 @@ h2 {
     width: 100px;
     height: auto;
 }
+
+#weather {
+    text-align: center;
+    margin: 20px;
+}
+
+.forecast-day {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+#weather {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Current Weather Styles */
+#weather h2 {
+    text-align: center;
+    color: #007BFF; /* Blue color for headings */
+}
+
+#current-temp {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#weather-icon {
+    display: block;
+    margin: 10px auto;
+    width: 80px; /* Set a fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Description Styles */
+#weather-desc {
+    font-style: italic;
+    text-align: center;
+}
+
+/* Forecast Styles */
+#forecast {
+    margin-top: 20px;
+}
+
+.forecast-day {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.forecast-day:last-child {
+    border-bottom: none; /* Remove last border */
+}
+
+.forecast-day img {
+    width: 50px; /* Set a fixed width for forecast icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* General styles for member spotlights */
+#member-spotlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* Styles for each member spotlight */
+.spotlight-member {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(30% - 20px); /* For larger screens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Image styles */
+.spotlight-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Heading styles */
+h4 {
+    margin-top: 0;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .spotlight-member {
+        width: calc(45% - 20px); /* For tablets and small laptops */
+    }
+}
+
+@media (max-width: 480px) {
+    .spotlight-member {
+        width: 100%; /* Full width for mobile devices */
+        margin: 10px 0; /* Adjust margins for mobile */
+    }
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 769px) {
+    #member-spotlights {
+        justify-content: space-between; /* Better spacing for larger screens */
+    }
+    .spotlight-member {
+        width: calc(30% - 20px); /* Maintain original width for larger screens */
+    }
+}
