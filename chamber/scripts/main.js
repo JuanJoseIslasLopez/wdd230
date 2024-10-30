@@ -16,37 +16,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener('DOMContentLoaded', () => {
     const sidebarMessage = document.querySelector('#visit-message');
-    const lastVisit = localStorage.getItem('lastVisit');
-    const currentVisit = Date.now();
+    const lastVisit = localStorage.getItem('lastVisit'); // Get the last visit time from localStorage
+    const currentVisit = Date.now(); // Get the current time in milliseconds
 
     if (lastVisit === null) {
+        // If there is no stored last visit, it's the user's first time visiting
         sidebarMessage.textContent = "Welcome! Let us know if you have any questions.";
     } else {
+        // Calculate the time difference between the current visit and the last visit in milliseconds
         const timeDifference = currentVisit - lastVisit;
-        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        const lastVisitDate = new Date(lastVisit).toLocaleDateString();
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
 
         if (daysDifference < 1) {
             sidebarMessage.textContent = "Back so soon! Awesome!";
         } else if (daysDifference === 1) {
-            sidebarMessage.textContent = `You last visited 1 day ago on ${lastVisitDate}.`;
+            sidebarMessage.textContent = `You last visited 1 day ago.`;
         } else {
-            sidebarMessage.textContent = `You last visited ${daysDifference} days ago on ${lastVisitDate}.`;
+            sidebarMessage.textContent = `You last visited ${daysDifference} days ago.`;
         }
     }
 
+    // Update localStorage with the current visit time
     localStorage.setItem('lastVisit', currentVisit);
-    
-    // Optional clear button for testing
-    const clearButton = document.querySelector('#clear-visit');
-    if (clearButton) {
-        clearButton.addEventListener('click', () => {
-            localStorage.removeItem('lastVisit');
-            sidebarMessage.textContent = "Last visit cleared! Welcome again!";
-        });
-    }
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll("img.lazy-image");
@@ -66,16 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Last updated date
-    const lastUpdated = document.getElementById('last-updated');
-    if (lastUpdated) {
-        lastUpdated.textContent = document.lastModified;
-    }
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("timestamp").value = new Date().toISOString();
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -224,4 +211,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Run the check on page load
     checkBannerVisibility();
-})})
+});
