@@ -149,5 +149,49 @@
         align-items: center;
         margin-top: 10px;
     }
+
+    /* List view styles */
+#members-container.list-view {
+    display: block;
 }
 
+#members-container.list-view .member-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#members-container.list-view img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+#members-container.list-view .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#members-container.list-view img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+}
+
+#members-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     }
+ 
+ #members-container.list-view .member-card {
+     flex-direction: row;
+     text-align: left;
+ }
+ 
+ .member-card img {
+     width: 100px;
+     height: auto;
+ }
+ 
