@@ -184,3 +184,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load member spotlights on page load
     loadMemberSpotlights();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('meet-greet-banner');
+    const closeButton = document.getElementById('close-banner');
+
+    // Function to check the day and display the banner if it's Monday, Tuesday, or Wednesday
+    function checkBannerVisibility() {
+        const today = new Date();
+        const day = today.getDay(); // 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, etc.
+        
+        console.log("Today's day number:", day); // Log the day number for debugging
+
+        // Show the banner if today is Monday (1), Tuesday (2), or Wednesday (3)
+        if (day === 1 || day === 2 || day === 3) {
+            banner.classList.remove('hidden');
+        } else {
+            banner.classList.add('hidden');
+        }
+    }
+
+    // Close the banner when the close button is clicked
+    closeButton.addEventListener('click', () => {
+        console.log("Close button clicked"); // Log when the button is clicked
+        banner.classList.add('hidden');
+    });
+
+    // Run the check on page load
+    checkBannerVisibility();
+});

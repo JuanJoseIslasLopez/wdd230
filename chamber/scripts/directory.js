@@ -43,3 +43,4 @@ document.getElementById('toggleView').addEventListener('click', function() {
 
 // Load members on page load
 document.addEventListener('DOMContentLoaded', loadMembers);
+

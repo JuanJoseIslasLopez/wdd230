@@ -27,9 +27,9 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="join.html">Join the Chamber</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Weather</a></li>
-                <li><a href="#">Company Spotlights</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#member-spotlights">Company Spotlights</a></li>
             </ul>
         </nav>
     </header>
@@ -43,8 +43,12 @@
         <section class="cta">
             <a href="join.html" class="cta-button">Join the Chamber Today!</a>
         </section>
+        <div id="meet-greet-banner" class="banner">
+            <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m! <button id="close-banner" aria-label="Close banner">❌</button></p>
+        </div>        
+        
         <section class="events">
-            <h2>Upcoming Events</h2>
+            <h2 id="events">Upcoming Events</h2>
             <ul>
                 <li>Business Networking Night – October 15</li>
                 <li>Montevideo Business Expo – November 5</li>
@@ -52,7 +56,7 @@
             </ul>
         </section>
         <section class="weather">
-            <h2>Montevideo Weather</h2>
+            <h2 id="weather">Montevideo Weather</h2>
             <p>Current Temperature: <span id="current-temp"></span></p>
             <p>Description: <span id="weather-desc"></span></p>
             <div id="forecast">
@@ -61,8 +65,9 @@
             </div>
         </section>
         <section class="spotlights">
+        <h2>Spotlight Members</h2>
             <div id="member-spotlights">
-                <h3>Spotlight Members</h3>
+                
             </div>
         </section>
     </main>

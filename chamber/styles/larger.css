@@ -179,7 +179,6 @@
     height: 80px;
     margin-bottom: 1rem;
 }
-}
 
 #members-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -194,4 +193,12 @@
      width: 100px;
      height: auto;
  }
- 
+
+ #member-spotlights {
+    justify-content: space-between; /* Better spacing for larger screens */
+}
+.spotlight-member {
+    width: calc(30% - 20px); /* Maintain original width for larger screens */
+}
+}
+
