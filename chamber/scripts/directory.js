@@ -1,3 +1,5 @@
+document.getElementById('last-updated').textContent = document.lastModified;
+
 async function loadMembers() {
     try {
         const response = await fetch('https://juanjoseislaslopez.github.io/wdd230/chamber/data/members.json'); // adjust path if needed
